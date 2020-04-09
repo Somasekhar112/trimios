@@ -1,0 +1,38 @@
+adduser ansadmin
+passwd ansadmin
+
+(#next go to visudo file#)
+visudo
+ansadmin ALL=(ALL)  NOPASSWD=ALL
+
+(and next it go to sshd_config file to set passwordAuthethentication no to passwordAuthentication yes)
+
+vi /etc/ssh/sshd_config
+PasswordAuthentication yes
+service sshd restart
+ 
+ next go to ansadmin user 
+ 
+ su ansadmin
+ cd /etc/ansible
+  
+  (mv hosts to hosts.org)
+  mv hosts hosts.org
+  vi hosts
+  (add localhost in this file)
+  
+  ansible -m ping all
+  
+ (# to create ssh-keys )
+ 
+ ssh-keygen
+ 
+ (to copy the ssh-key to the local host)
+ 
+ ssh-copy-id localhost
+ 
+ ssh localhost
+ 
+ ansible -m ping all
+ 
+ 
