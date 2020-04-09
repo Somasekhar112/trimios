@@ -3,7 +3,7 @@ passwd ansadmin
 
 (#next go to visudo file#)
 visudo
-ansadmin ALL=(ALL)  NOPASSWD=ALL
+ansadmin ALL=(ALL)  NOPASSWD:ALL
 
 (and next it go to sshd_config file to set passwordAuthethentication no to passwordAuthentication yes)
 
