@@ -161,3 +161,19 @@ chown ansible:ansible filename
   157  ansible all -a "/bin/echo hello"
   158  ansible --list-host all
   159  history
+ 1  exit
+    2  cd ~
+    3  ls -a
+    4  cd ..
+    5  touch autherized_keys
+    6  sudo touch autherized_keys
+    7  ls -a
+    8  pwd
+    9  cd ..
+   10  cd ~
+   11  ls -a
+   12  mv ../autherized_keys .
+   13  sudo mv ../autherized_keys .
+   14  ls
+   15  su root
+   16  history
