@@ -1,3 +1,163 @@
 sudo su -
 
 chown ansible:ansible filename
+
+ 1  passwd root
+    2  passwd ec2-user
+    3  python --version
+    4  yum update
+    5  python -V
+    6  python --version
+    7  python2 --version
+    8  'python3 --version
+    9  'python3 --version
+   10  python3 --version
+   11  'python3 --version
+   12  python3 --version
+   13  yum install python2
+   14  python -V
+   15  python2 --version
+   16  yum install ansible
+   17  yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+   18  yum install ansible
+   19  ansible --version
+   20  yum install python3
+   21  python3 --version
+   22  ls
+   23  adduser ansible
+   24  passwd ansible
+   25  visudo
+   26  vi /etc/ssh/sshd_config
+   27  service sshd restart
+   28  su ansible
+   29  cd /etc/ansible
+   30  ls
+   31  mv hosts hosts.orig
+   32  ls
+   33  vi hosts
+   34  ansible -m ping all
+   35  ssh-keygen
+   36  ssh-copy-id localhost
+   37  vi hosts
+   38  ssh-copy-id ip-172-31-6-92.ap-south-1.compute.internal
+   39  ls
+   40  ansible -m ping all
+   41  vi hosts
+   42  ansible --list-host all
+   43  visudo
+   44  vi hosts
+   45  ansible -m ping all
+   46  ssh-copy-id ip-172-31-33-46.ap-south-1.compute.internal
+   47  ssh-keygen
+   48  ssh-copy-id ip-172-31-33-46.ap-south-1.compute.internal
+   49  service sshd restart
+   50  ssh redhat9
+   51  vi hosts
+   52  ssh redhat9
+   53  vi /etc/ssh/sshd_config
+   54  cat /etc/ssh/sshd_config | grep port
+   55  port -a -t ssh_port_t -p tcp
+   56  port -a -t ssh_port_t -p tcp 22
+   57  port 22
+   58  cat id_rsa
+   59  cd ~
+   60  ssh-copy-id  -i ~/.ssh/id_rsa.pub ip-172-31-33-46.ap-south-1.compute.internal
+   61  cat id_rsa >> authorized_keys
+   62  cd .ssh
+   63  cat id_rsa >> authorized_keys
+   64  ls
+   65  cat id_rsa.pub >> authorized_keys
+   66  ls
+   67  hostname
+   68  hostname -f
+   69  ssh-copy-id ip-172-31-33-46.ap-south-1.compute.internal
+   70  ssh-copy-id ec2-user@ip-172-31-33-46.ap-south-1.compute.internal
+   71  sudo ssh-copy-id ec2-user@ip-172-31-33-46.ap-south-1.compute.internal
+   72  service sshd restart
+   73  cd ..
+   74  chmod 700 .ssh
+   75  cd .ssh
+   76  chmod 600 .ssh/authorized_keys
+   77  ls
+   78  cd ..
+   79  chmod 600 .ssh/authorized_keys
+   80  restorecon -r -vv .ssh/authorized_keys
+   81  chmod 700 /root/.ssh
+   82  chmod 600 /root/.ssh/authorized_keys
+   83  sudo systemctl restart sshd
+   84  chmod 777 /root/.ssh/id_rsa.pub
+   85  ssh-copy-id -i /root/.ssh/id_rsa.pub ip-172-31-33-46.ap-south-1.compute.internal
+   86  ssh-copy-id -i /root/.ssh/id_rsa.pub ec2-user@ip-172-31-33-46.ap-south-1.compute.internal
+   87  UsePAM yes
+   88  vi /etc/ssh/sshd_config
+   89  cat /etc/ssh/sshd_config
+   90  vi /etc/ssh/sshd_config
+   91  sudo systemctl restart sshd
+   92  systemctl restart sshd
+   93  vi /etc/ssh/sshd_config
+   94  systemctl restart sshd
+   95  sudo systemctl status sshd
+   96  ansible -i /etc/ansible/hosts redhat9 -m ping
+   97  ansible -i /etc/ansible/hosts ip-172-31-33-46.ap-south-1.compute.internal -m ping
+   98  ls
+   99  clear
+  100  exit
+  101  su ec2-user
+  102  passwd ec2-user
+  103  ls
+  104  cd authorized_keys
+  105  vi authorized_keys
+  106  cat authorized_keys
+  107  ls -a
+  108  cd .ssh
+  109  ls
+  110  cat ~/.ssh/id_rsa.pub
+  111  nano ~/.ssh/authorized_keys
+  112  yum install nano
+  113  nano ~/.ssh/authorized_keys
+  114  systemctl restart sshd
+  115  start ssh agent
+  116  ssh-copy-id -i id_rsa.pub ansible@ip-172-31-33-46.ap-south-1.compute.internal
+  117  ssh-copy-id -i id_rsa.pub ec2-user@ip-172-31-33-46.ap-south-1.compute.internal
+  118  cd ..
+  119  ssh-copy-id -i id_rsa.pub ec2-user@ip-172-31-33-46.ap-south-1.compute.internal
+  120  cd .ssh
+  121  ssh-copy-id -i id_rsa.pub ec2-user@ip-172-31-33-46.ap-south-1.compute.internal
+  122  ansible -m ping all
+  123  ansible --list-host all
+  124  ansible --list-host redhat9
+  125  ansible --list-redhat9
+  126  ansible --list-host redhat9
+  127  ansible --list-host ip-172-31-33-46.ap-south-1.compute.internal
+  128  ssh ip-172-31-33-46.ap-south-1.compute.internal
+  129  ansible -m ping all
+  130  ansible all -a "/bin/echo hello"
+  131  ssh-agent
+  132  ssh-agent bash
+  133  ls
+  134  ansible_ssh_private_key_file
+  135   ssh-copy-id -i id_rsa.pub root@ip-172-31-33-46.ap-south-1.compute.internal
+  136  ls -la
+  137  cd ..
+  138  ls -la
+  139  chmod 700 .ssh
+  140  ls
+  141  ls -ltr
+  142  ls -la
+  143  ls
+  144  cd ..
+  145  ls
+  146  cd ~
+  147  ls
+  148  vi authorized_keys
+  149  su ansible
+  150  ls
+  151  chown ansible autherized_keys
+  152  ls -la
+  153  chown ansible:ansible autherized_keys
+  154  ls -la
+  155  vi autherized_keys
+  156  ansible -m ping all
+  157  ansible all -a "/bin/echo hello"
+  158  ansible --list-host all
+  159  history
