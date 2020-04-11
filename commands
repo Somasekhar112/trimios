@@ -177,3 +177,131 @@ chown ansible:ansible filename
    14  ls
    15  su root
    16  history
+ 1  passwd root
+    2  useradd ansible
+    3  passwd ansible
+    4  ls
+    5  ls la
+    6  ls -la
+    7  su ansible
+    8  cd ~
+    9  passwd ansible
+   10  visudo
+   11  ls
+   12  su ansible
+   13  cd /etc/ssh/sshd_config
+   14  vi /etc/ssh/sshd_config
+   15  systemctl service restart
+   16  systemctl sshd service restart
+   17  sudo systemctl status sshd
+   18  ssh ip-172-31-43-60.ap-south-1.compute.internal
+   19  ssh root@ip-172-31-43-60.ap-south-1.compute.internal
+   20  sudo ssh root@ip-172-31-43-60.ap-south-1.compute.internal
+   21  ssh ip-172-31-43-60.ap-south-1.compute.internal
+   22  cclear
+   23  clear
+   24  ls
+   25  ping ip-172-31-44-198.ap-south-1.compute.internal
+   26  ip-172-31-44-198.ap-south-1.compute.internal
+   27  ping  ip-172-31-44-198.ap-south-1.compute.internal
+   28  cd .ssh
+   29  ls
+   30  vi authorized_keys
+   31  cd ..
+   32  ls
+   33  su ansible
+   34  ls
+   35  exit
+   36  passwd root
+   37  ls
+   38  cd .ssh
+   39  ls
+   40  cd ..
+   41  su ansible
+   42  chown 777 ansible
+   43  visudo
+   44  ssh 172.31.43.60
+   45  sudo ssh 172.31.43.60
+   46  exit
+   47  service ntpd start
+   48  service sshd restart
+   49  cd .ssh
+   50  cat id_rsa >> authorized_keys
+   51  ls
+   52  exit
+   53  passwd root
+   54  passwd ansible
+   55  ls
+   56  su ansible
+   57  exit
+   58  ls
+   59  su ansible
+   60  ls
+   61  su ansible
+   62  exit
+   63  ls
+   64  ls -la
+   65  cd .ssh
+   66  ls
+   67  ssh-copy-id ansible@172.31.43.60
+   68  cd ..
+   69  ls
+   70  ls
+   71  cd .ssh
+   72  ls
+   73  vi au
+   74  vi authorized_keys
+   75  cd ..
+   76  su ansible
+   77  ls
+   78  visudo
+   79  vi /etc/ssh/shd_config
+   80  vi /etc/ssh/sshd_config
+   81  ls
+   82  ssh-keygen
+   83  ls
+   84  cd .ssh
+   85  ls
+   86  cd ..
+   87  ssh-copy-id root@ip-172-31-43-60
+   88  ssh-copy-id 172.31.43.60
+   89  su ansible
+   90  ls
+   91  ls -la
+   92  cd .ssh
+   93  ls
+   94  v i authorized_keys
+   95  vi authorized_keys
+   96  su ansible
+   97  ssh-keygen -t rsa
+   98  ssh-copy-id demo@198.51.100.0
+   99  ssh-copy-id -i ~/.ssh/id_rsa.pub user@remote-server 172.31.43.60
+  100  ssh-copy-id -i ~/.ssh/id_rsa.pub user@remote-server ip-172-31-43-60.ap-south-1.compute.internal
+  101  brew install ssh-copy-id
+  102  yum install ssh-copy-id
+  103  sudo nano /etc/ssh/sshd_config
+  104  yum install nano
+  105  sudo nano /etc/ssh/sshd_config
+  106  sudo systemctl reload sshd.service
+  107  ssh-copy-id -i ~/.ssh/id_rsa.pub ansible@172.31.43.60
+  108  ssh -i ~/.ssh/id_rsa ansible@172.31.43.60
+  109  chmod 700 ~/.ssh
+  110  ssh-add
+  111  exit
+  112  ls
+  113  yum install openssh-server
+  114  ls
+  115  ls -la
+  116  cd .shh
+  117  cd ssh
+  118  cd .ssh
+  119  ls
+  120  sudo rm id_rsa
+  121  sudo rm id_rsa.pub
+  122  ls
+  123  vi authorized_keys
+  124  ssh-copy-id -i ~/.ssh/id_rsa.pub ip-172-31-43-60.ap-south-1.compute.internal
+  125  cd ..
+  126  su ansible
+  127  exit
+  128  history
