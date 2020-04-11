@@ -35,4 +35,4 @@ service sshd restart
  
  ansible -m ping all
  
- 
+ ssh -v -v myhost
