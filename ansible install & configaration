@@ -29,7 +29,22 @@ sudo vi /etc/ansible/hosts (# >>>>>> node ip address add inthis file   <<<<<<<  
 
 ansible all -m ping 
 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
+
+(# this is node instance commands of ansible configaration )
+
+sudo su -
+yum update 
+
+useradd ansible (# u adding the same username of the ansible server >>>>ansible<<(server username = node user name) ansible <<<<<<<<)
+passwd ansible
+
+visudo    (# ansible ALL=(ALL)  NOPASSWD: ALL )
+
+vi /etc/ssh/sshd_config   (# open file and edit this >>>>>> PASSWORDAUTHENTICATION YES  <<<<<<<< )
+
+service sshd restart 
 
 
 
