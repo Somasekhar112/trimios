@@ -1,0 +1,35 @@
+sudo su -
+sudo yum update
+
+yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+
+yum install ansible
+
+ansible --version
+(ok ansible instalation is competed )
+useradd ansible
+passwd ansible
+
+visudo (# open file and add  >>>>> ansible ALL=(ALL) NOPASSWD: ALL   <<<<)
+
+vi /etc/ssh/sshd_config (# open file and edit this >>>>>> PASSWORDAUTHENTICATION YES  <<<<<<<< )
+service sshd restart
+
+su ansible
+ls -la
+cd .ssh
+
+ssh-keygen  (# open .ssh file id_rsa key generated )
+
+ssh-copy-id 172.168.1.6   (# ip address )
+
+ssh 172.168.1.6  (#  it ssh connection is working r not u see )
+
+sudo vi /etc/ansible/hosts (# >>>>>> node ip address add inthis file   <<<<<<<  )
+
+ansible all -m ping 
+
+
+
+
+
