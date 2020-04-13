@@ -1,0 +1,17 @@
+#! /bin/bash
+
+sudo yum update
+
+sudo su -
+
+ansible --version
+
+echo "ansible not installed"
+
+yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.$
+
+yum install ansible
+
+ansible --version
+
+echo "ansible installation is completed"
