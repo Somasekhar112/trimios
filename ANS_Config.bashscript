@@ -1,0 +1,23 @@
+#! /bin/bash
+
+#useradd ansible
+
+#passwd ansible
+
+echo "one ansible user is created"
+
+#visudo
+
+echo "all permissions for ansible user"
+
+#vi /etc/ssh/sshd_config
+
+echo "passwordauthentication yes is updated"
+
+#service sshd restart
+
+echo "The sshd file is restarted "
+
+su ansible
+
+echo "now you are in ansible user"
