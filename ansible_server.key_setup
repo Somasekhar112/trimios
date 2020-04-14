@@ -1,0 +1,19 @@
+#! /bin/bash
+
+su admin
+
+mkdir .ssh
+
+chmod 700 .ssh
+
+cd .ssh
+
+touch authorized_keys   #in node of id_rsa.pub key copy and paste to this file
+
+sudo vi /etc/ansible/hosts #[node2] 172.31.38.103   ansible_ssh_user=admin    a$
+
+ansible --list-host all
+
+ansible -m ping all
+
+ansible all -a "/bin/echo hello"
