@@ -2,6 +2,8 @@
 
 sudo yum update
 
+sudo yum install sshpass   #ansible -m ping all --ask-pass(to connect onetime ssh password)
+
 sudo su -
 
 ansible --version
