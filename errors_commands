@@ -1,0 +1,17 @@
+
+ ansible webserver2 -m yum -a "name=git state=present" --ask-pass
+ (above  cmd is run due to this error)
+ 
+172.31.40.92 | FAILED! => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/libexec/platform-python"
+    },
+    "changed": false,
+    "msg": "This command has to be run under the root user.",
+    "results": []
+    [the issue is due to ansible depricated methods that got decommissioned after 2.6 release]
+    
+    and then
+    https://www.middlewareinventory.com/blog/ansible-sudo-ansible-become-example/
+    
+    ansible node1 -m yum -a "name=git state=present" -b -K[this cmd worked]
