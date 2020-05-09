@@ -1,6 +1,6 @@
 #! /bin/bash
 
-yum install openjdk-1.8
+yum install java-1.8.0-openjdk-devel
 
 java -version
 
@@ -13,6 +13,8 @@ cd /opt
 wget https://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.34/bin/apache-tomcat-9.0.34.tar.gz
 
 tar -xvf apache-tomcat-9.0.34.tar.gz
+
+cp /opt/apache-tomcat-9.0.34  /usr/share/tomcat
 
 cd apache-tomcat-9.0.34
 
