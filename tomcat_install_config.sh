@@ -10,11 +10,13 @@ javac -version
 
 cd /opt
 
+yum install wget
+
 wget https://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.34/bin/apache-tomcat-9.0.34.tar.gz
 
 tar -xvf apache-tomcat-9.0.34.tar.gz
 
-cp /opt/apache-tomcat-9.0.34  /usr/share/tomcat
+cp -r /opt/apache-tomcat-9.0.34  /usr/share/tomcat
 
 cd apache-tomcat-9.0.34
 
