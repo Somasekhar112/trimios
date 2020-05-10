@@ -1,0 +1,44 @@
+- hosts: node1
+  tasks:
+  - name: Install Java 1.8
+    yum: name=java-1.8.0-openjdk state=present
+
+  - name: add group "tomcat"
+    group: name=tomcat
+
+  - name: add user "tomcat"
+    user: name=tomcat group=tomcat home=/usr/share/tomcat createhome=no
+    become: True
+    become_method: sudo
+
+  - name: Download Tomcat
+    get_url: url=http://apachemirror.wuchna.com/tomcat/tomcat-9/v9.0.34/bin/apache-tomcat-9.0.34.tar.gz dest=/opt/apache-tomcat-9.0.34.tar.gz
+
+  - name: Extract archive
+    command: chdir=/usr/share /bin/tar xvf /opt/apache-tomcat-9.0.34.tar.gz -C /opt/ creates=/opt/apache-tomcat-9.0.34
+
+  - name: Symlink install directory
+    file: src=/opt/apache-tomcat-9.0.34 path=/usr/share/tomcat state=link
+
+  - name: Change ownership of Tomcat installation
+    file: path=/usr/share/tomcat/ owner=tomcat group=tomcat state=directory recurse=yes
+
+  - name: Configure Tomcat server
+    template: src=/root/yamlfiles/server.xml dest=/usr/share/tomcat/conf/  mode=655
+#    notify: restart tomcat
+
+  - name: Configure Tomcat users
+    template: src=/root/yamlfiles/tomcat-users.xml dest=/usr/share/tomcat/conf/
+#    notify: restart tomcat
+
+  - name: configure context file
+    template: src=/root/yamlfiles/context.xml dest=/usr/share/tomcat/webapps/manager/META-INF/
+
+  - name: tomcat.service
+    copy: src=/root/yamlfiles/tomcat.service  dest=/etc/systemd/system/
+    
+  - name: Start Tomcat
+    service: name=tomcat state=started enabled=yes
+
+  - name: wait for tomcat to start
+    wait_for: port={{8081}}
